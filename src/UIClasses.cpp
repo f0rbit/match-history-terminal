@@ -3,7 +3,7 @@
 #include "UrlReader.h"
 #include "Manager.h"
 #include <math.h>
-#include "../include/ncurses.h"
+#include <ncurses.h>
 #include <sstream>
 #include <iomanip>
 #include <fstream>

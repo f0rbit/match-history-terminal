@@ -3,6 +3,7 @@
 #include <string.h>
 #include <iostream>
 #include <vector>
+#include <ncurses.h>
 using std::string;
 using std::vector;
 

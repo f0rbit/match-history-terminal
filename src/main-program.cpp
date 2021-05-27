@@ -3,6 +3,7 @@
 #include "Manager.h"
 #include <vector>
 #include <fstream>
+#include <ncurses.h>
 using namespace std;
 
 Manager* Manager::instance = new Manager(); // creates an instance of the manager
