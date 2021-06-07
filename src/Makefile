@@ -33,7 +33,7 @@ test-curl: test/curl.cpp
 
 test-riot-api: test/riot-api-test.cpp
 	@echo ${WHITE}Testing ${PURPLE}Riot API
-	@g++ test/riot-api-test.cpp UrlReader.cpp -o test-riot-api -lcurl
+	@g++ test/riot-api-test.cpp classes/Curl/UrlReader.cpp -o test-riot-api -lcurl
 
 tests: test-curl test-rapid-json test-riot-api
 	@./test-curl > output.txt 
@@ -51,7 +51,7 @@ clean:
 
 install:
 	@echo "${GREEN}Compiling Program...${RESET}"
-	@g++ UIClasses.cpp main-program.cpp RiotClasses.cpp UrlReader.cpp -lncurses -lcurl -o program.sh
+	@g++ -o program.sh -lncurses -lcurl main-program.cpp  classes/UI/Selectable.cpp classes/Curl/UrlReader.cpp classes/Managers/InputManager.cpp classes/Managers/DisplayManager.cpp classes/Riot/MatchPlayer.cpp classes/Riot/Match.cpp  classes/Riot/Utility.cpp classes/Managers/MatchStorage.cpp classes/UI/Buttons/Buttons.cpp classes/UI/Labels/Labels.cpp classes/UI/Lists/Lists.cpp classes/UI/Boxed.cpp classes/UI/Element.cpp classes/UI/InputBox.cpp classes/UI/Screen.cpp classes/Managers/Controller.cpp 
 
 run: install
 	@./program.sh
